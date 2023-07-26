@@ -1,7 +1,7 @@
 const accesskey = "hDKCtAwCSmMfKQNPYlCtZiz0Y8572-INU-LIYyh7x24";
 
 const formEl = document.querySelector("form");
-const inputEl = document.getElementById("search-button");
+const inputEl = document.getElementById("search-input");
 const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-button");
 
@@ -16,11 +16,8 @@ async function searchImages(){
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log(response)
-    console.log(data)
 
     const results = data.results;
-    console.log(results)
 
     if(page === 1){
             searchResults.innerHTML = "";
